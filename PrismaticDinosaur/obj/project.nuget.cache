@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QqahVhYA7VNUonJmcQZHC6m8U5wjpvCjJDezmVgcEypzkkCZmmS4sfshY5LV6z/NMQJuxlu1m1IUfrHOAK2ZvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mgadz\\Documents\\Stardew Mods\\PrismaticDinosaur\\PrismaticDinosaur\\PrismaticDinosaur.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mgadz\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.1.1\\pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

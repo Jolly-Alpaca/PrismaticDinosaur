@@ -1,0 +1,8 @@
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.csproj.AssemblyReference.cache
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.AssemblyInfoInputs.cache
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.AssemblyInfo.cs
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.csproj.CoreCompileInputs.cache
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\bin\Debug\net6.0\PrismaticDinosaur.deps.json
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\bin\Debug\net6.0\PrismaticDinosaur.dll
+C:\Users\mgadz\Documents\Stardew Mods\PrismaticDinosaur\PrismaticDinosaur\obj\Debug\net6.0\PrismaticDinosaur.dll
