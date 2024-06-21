@@ -6,5 +6,5 @@
     "UniqueID": "JollyLlama.PrismaticDinosaurMonster",
     "EntryDll": "PrismaticDinosaur.dll",
     "MinimumApiVersion": "3.0.0",
-    "UpdateKeys": []
+    "UpdateKeys": [ "GitHub:Jolly-Alpaca/PrismaticDinosaur", "Nexus:25342" ]
 }

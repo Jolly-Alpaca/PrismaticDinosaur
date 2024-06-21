@@ -1,5 +1,3 @@
-using System;
-using System.Reflection.Emit;
 using HarmonyLib;
 using Microsoft.Xna.Framework;
 using StardewValley.Monsters;
@@ -11,28 +9,38 @@ namespace PrismaticDinosaur.Patches
     {
         private static IMonitor Monitor;
 
-        internal static void Initialize(IMonitor monitor)
+        /// <summary>
+        /// Apply the harmony patches to Monster.cs
+        /// </summary>
+        /// <param name="monitor">The Monitor instance for the PrismaticDinosaurMonster module</param>
+        /// <param name="harmony">The Harmony instance for the PrismaticDinosaurMonster module</param>
+        internal static void Apply(IMonitor monitor, Harmony harmony)
         {
             Monitor = monitor;
-        }
-
-        internal static void Apply(Harmony harmony)
-        {
             harmony.Patch(
-                original: AccessTools.Constructor(typeof(StardewValley.Monsters.Monster), new Type[] {typeof(string), typeof(Vector2)}),
+                original: AccessTools.Constructor(typeof(Monster), new Type[] {typeof(string), typeof(Vector2)}),
                 prefix: new HarmonyMethod(typeof(MonsterPatcher), nameof(MonsterConstructor_Prefix))
             );
         }
 
+        /// <summary>
+        /// Prefix to patch the Monster constructor in MonsterPatcher.cs
+        /// Adds logic to add a 10% chance of spawning a Prismatic Pepper Rex instead of a regular Pepper Rex
+        /// </summary>
+        /// <remarks>This does not prevent the constructor from running. It only changes the name passed to the constructor.</remarks>
+        /// <param name="__instance">The Monster instance being instanciated</param>
+        /// <param name="name">The name of the monster being passed to the constructor</param>
+        /// <param name="position">The location to spawn the Monster instance</param>
+        /// <returns>Always returns true</returns>
         internal static bool MonsterConstructor_Prefix(Monster __instance, ref string name, Vector2 position)
         {
             try
             {
                 // 10% change to spawn a prismatic pepper rex instead of a regular pepper rex
                 Random dinoRandom = new Random();
-                ModEntry.ModMonitor.Log($"Constructor Name: {name}.", LogLevel.Debug);
                 if (name == "Pepper Rex" && dinoRandom.NextDouble() < 0.1)
                 {
+                    // Change the name passed to the Monster constructor to the Prismatic Pepper Rex name
                     name = "JollyLlama.PrismaticDinosaur.Prismatic Pepper Rex";
                 }
                 return true;   

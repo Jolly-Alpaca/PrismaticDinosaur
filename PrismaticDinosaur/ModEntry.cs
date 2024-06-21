@@ -14,13 +14,10 @@ namespace PrismaticDinosaur
         {
             ModMonitor = Monitor;
             ModHelper = helper;
-            MonsterPatcher.Initialize(ModMonitor);
-            DinoMonsterPatcher.Initialize(ModMonitor);
 
             var harmony = new Harmony(this.ModManifest.UniqueID);
-            //Harmony.DEBUG = true;
-            MonsterPatcher.Apply(harmony);
-            DinoMonsterPatcher.Apply(harmony);
+            MonsterPatcher.Apply(ModMonitor, harmony);
+            DinoMonsterPatcher.Apply(ModMonitor, harmony);
         }
     }
 }
